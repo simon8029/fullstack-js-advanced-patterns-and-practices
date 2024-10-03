@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import ReactHome from './modules/react/ReactHome';
-import MemoAndUseCallback from './modules/react/MemoAndUseCallback.tsx';
+import EventHandler from './modules/react/EventHandler';
+import Architecture from './modules/architecture/index';
+import MemoAndUseCallback from './modules/react/MemoAndUseCallback';
 import PerformanceOptimization from './modules/react/PerformanceOptimization';
 import AdvancedComponentPatterns from './modules/react/AdvancedComponentPatterns';
 import ReduxHome from './modules/redux/ReduxHome';
@@ -33,7 +35,9 @@ function App() {
         <div style={{ flex: 1, paddingTop: '20px' }}> {/* flex: 1 确保内容区占据剩余空间 */}
           <Routes>
             <Route path="/" element={<ReactHome />} />
+            <Route path="/architecture" element={<Architecture />} />
             <Route path="/react" element={<ReactHome />} />
+            <Route path="/react/EventHandler" element={<EventHandler />} />
             <Route path="/react/MemoAndUseCallback" element={<MemoAndUseCallback />} />
             <Route path="/react/performance-optimization" element={<PerformanceOptimization />} />
             <Route path="/react/advanced-component-patterns" element={<AdvancedComponentPatterns />} />
@@ -57,7 +61,7 @@ function App() {
             <Route path="/googlecloud/firebase" element={<Firebase />} />
           </Routes>
         </div>
-        <Footer /> {/* Footer 保持在底部 */}
+        <Footer />
       </Router>
     </div>
   );

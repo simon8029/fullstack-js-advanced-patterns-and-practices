@@ -19,6 +19,9 @@ const Navigation = () => {
           Fullstack JS Advanced Patterns and Practices
         </Typography>
         <Box>
+          <Button sx={getButtonStyle('/architecture')} component={Link} to="/architecture">
+            Architecture
+          </Button>
           <Button sx={getButtonStyle('/react')} component={Link} to="/react">
             React
           </Button>
